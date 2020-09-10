@@ -77,28 +77,83 @@
 /******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
 /******/
 /******/ 	// __webpack_public_path__
-/******/ 	__webpack_require__.p = "";
+/******/ 	__webpack_require__.p = "/dist/js";
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = "./test.js");
+/******/ 	return __webpack_require__(__webpack_require__.s = "./test/index.js");
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ "./test.js":
-/*!*****************!*\
-  !*** ./test.js ***!
-  \*****************/
-/*! no static exports found */
-/***/ (function(module, exports) {
+/***/ "./test/index.js":
+/*!***********************!*\
+  !*** ./test/index.js ***!
+  \***********************/
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-var myfun = function myfun() {
-  var name = "crong1";
-  console.log("start ".concat(name, " project by webpack"));
-};
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _main_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./main.js */ "./test/main.js");
 
-myfun();
+var myUser = new _main_js__WEBPACK_IMPORTED_MODULE_0__["default"]();
+
+/***/ }),
+
+/***/ "./test/main.js":
+/*!**********************!*\
+  !*** ./test/main.js ***!
+  \**********************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+var User = /*#__PURE__*/function () {
+  function User() {
+    _classCallCheck(this, User);
+
+    console.log(1);
+    this.registerEvents();
+  }
+
+  _createClass(User, [{
+    key: "getUserList",
+    value: function getUserList(id, pw) {
+      if (!id) {
+        var dataURL = "./data/data.json";
+        var oReq = new XMLHttpRequest();
+        oReq.addEventListener("load", function () {
+          var list = JSON.parse(oReq.responseText).body;
+          console.log(list);
+        });
+        oReq.open("GET", dataURL);
+        oReq.send();
+      } else {}
+    }
+  }, {
+    key: "registerEvents",
+    value: function registerEvents() {
+      //로그인
+      var btn_login = document.querySelector("#btn_login");
+      console.log(btn_login);
+      btn_login.addEventListener(function (e) {
+        console.log(e);
+      });
+    }
+  }]);
+
+  return User;
+}();
+
+/* harmony default export */ __webpack_exports__["default"] = (User);
 
 /***/ })
 

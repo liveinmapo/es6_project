@@ -1,0 +1,49 @@
+{
+    "users": [
+        {
+            "name": "홍길동",
+            "id": "A0001",
+            "pw": "password12!",
+            "hobby": "sleep",
+            "activeYn": "Y",
+            "lvl": "1"
+        },
+        {
+            "name": "가길동",
+            "id": "A0003",
+            "pw": "password13!",
+            "hobby": "movie",
+            "activeYn": "N",
+            "lvl": "2"
+        },
+        {
+            "name": "나길동",
+            "id": "A0004",
+            "pw": "password14!",
+            "activeYn": "Y",
+            "hobby": "",
+            "lvl": "2"
+        },
+        {
+            "name": "다길동",
+            "id": "A0005",
+            "pw": "password15!",
+            "activeYn": "N",
+            "lvl": "1"
+        },
+        {
+            "name": "라길동",
+            "id": "A0006",
+            "pw": "password16!",
+            "activeYn": "Y",
+            "lvl": "3"
+        },
+        {
+            "name": "마길동",
+            "id": "A0007",
+            "pw": "password17!",
+            "activeYn": "Y",
+            "lvl": "2"
+        }
+    ]
+}

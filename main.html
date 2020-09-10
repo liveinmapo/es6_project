@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8" />
+        <title>사용자관리</title>
+    </head>
+    <body>
+        <header>
+            <h1></h1>
+        </header>
+        <div id="content">
+            <div id="left">
+                <div id="before_login">
+                    <h2>로그인</h2>
+                    <input
+                        type="text"
+                        id="id"
+                        placeholder="아이디를 입력하세요."
+                    />
+                    <input
+                        type="password"
+                        id="pw"
+                        placeholder="비밀번호를 입력하세요."
+                    />
+                    <input type="button" id="btn_login" value="로그인" />
+                </div>
+                <div id="after_login" hidden>
+                    <h2>안녕하세요</h2>
+                    <span id="userNm"></span>
+                    방문횟수:<span id="loginCnt"></span>
+                    <input type="button" id="btn_logout" value="로그아웃" />
+                    <input id="leave" type="button" value="탈퇴" />
+                </div>
+            </div>
+            <div id="middle">
+                <h2>사용자 목록</h2>
+                <ul></ul>
+            </div>
+        </div>
+        <script src="./dist/js/bundle.js"></script>
+    </body>
+</html>
